@@ -1,0 +1,39 @@
+/* BASIC SELECTOR*/
+
+/* ELEMENT SELECTOR*/
+h1{
+    color:red;
+    font-size: 100px;
+}
+
+/* ID SELECTOR*/
+#patni {
+    font-size: 200px;
+    color:antiquewhite;
+}
+
+
+/* CLASS SELECTOR*/
+.muskan{
+   font-size: 30px;
+   background-color:blue 
+}
+
+
+/* ATTRIBUTE SELECTOR*/
+input[type="password"]{
+    background-color: blueviolet;
+}
+
+a[href="http://codingblocks.com"]{
+    color: green;
+}
+
+
+/* UNIVERSAL SELECTOR*/
+*{
+    border: 2px solid black;
+}
+
+
+

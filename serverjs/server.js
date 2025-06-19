@@ -18,11 +18,16 @@ const port = 8080;
 const fs =require('fs')
 
 const server = http.createServer((req,res)=>{
-    console.log(req.url)
+    // console.log(req.url)
     res.writeHead(200,{
         "Content-Type":'text/html'
     });
-    fs.readFile('./index.html',(err,data)=>{
+
+    if(req.url=='/') file = 'index.html';
+    else if(req.url == '/profile') file = 'profile.html';
+    else file = 'signin.html';
+    
+    fs.readFile(file,(err,data)=>{
         if(err){
            return console.log(err);
         }  

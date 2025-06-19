@@ -1,0 +1,14 @@
+{
+  "name": "learningexpress",
+  "version": "1.0.0",
+  "description": "learning to write servers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muskan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

@@ -40,3 +40,13 @@ app.get('/',m1,m2,m3
 app.listen(8888,()=>{
     console.log('server is running at http://localhost:8888');
 })
+
+// let promise = Promise((resolve,reject)=>{
+//     let success = true;
+
+//     if(success){
+//         resolve('successful');
+//     }else{
+//         reject('Error');
+//     }
+// })

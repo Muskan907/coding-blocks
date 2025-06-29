@@ -1,0 +1,94 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="BlogsHeading">Blogs Site</h1>
+    <form class="blogsForm" action="/blogs" method="POST">
+        Title: <input class="title" name="title" placeholder="enter title" type="text"><br>
+        Actor: <input class="actor" name="actor" placeholder="enter Actor" type="text"><br>
+        Description: <textarea class="description" name="description" rows="10" cols="50" placeholder="enter description" type="text"></textarea>
+
+
+        <button type="submit">Add Blog</button>
+    </form>
+
+    
+    <ul class="blogsList">
+        {{#each blogs as |blogs|}}
+        <li class="blogItem">Title: {{this.title}},Actor:{{blog.actor}}, Description: {{this.description}}</li>
+        {{/each}}
+    </ul>
+</body>
+</html> --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    {{!-- {{> navbar}} //have to use this to use navbar --}}
+    {{> navbar}}
+    <div class="header">
+        <h1 class="actorsHeading">Actors - Details</h1>
+    
+     <form class="actorsForm" action="/actors" method="POST">
+            <div class="nameBox">
+                <span class="nameText">Name: </span>
+                <input class="name"  name="name" placeholder="Enter Name"> 
+            </div>
+            <div class="actorBox">
+                <span class="actorImage">Image: </span>
+                 <input class="actorImageUrl"  name="actorImageUrl" placeholder="Enter actor"> 
+            </div>
+            <div class="ageBox">
+                <span class="ageText">Age: </span>
+                <textarea class="actor"  name="age"  placeholder="Enter age"></textarea> 
+            </div>
+            
+            <button class="submitBtn" type="submit">Add Actor</button>
+
+            <ul class="actorList">
+        {{#each actors as |actor|}}
+            <li class="actorItem">
+                <div class="actorTitle">
+                    <span class="actorTitleHeading">Name: </span>
+                    <span class="actorTitleText">{{actor.name}}</span>
+                </div>
+                <div class="actorActor">
+                    <span class="actorActorHeading">Image Url: </span>
+                    <span class="actorActorText"><img alt="actor-image" src="{{actor.imageUrl}}" width="200" height="250"></span>
+                </div>
+                <div class="actorAge">
+                    <span class="actorAgeHeading">Age: </span>
+                    <span class="actorAgeText">{{actor.age}}</span>
+                </div>
+
+                <button class="dlt-btn">
+                    <a href="/delete?id={{actor._id}}">Delete</a>
+                </button>
+
+                <button class="update-btn">
+                    <a href="/update?id={{actor._id}}">Update</a>
+                </button>
+
+                <button class="details-btn">
+                    <a href="/details?id={{actor._id}}">Details</a>
+                </button>
+            </li>
+        {{/each}}
+    </ul>
+        </form>
+    
+    </div>
+     
+
+</body>
+</html>

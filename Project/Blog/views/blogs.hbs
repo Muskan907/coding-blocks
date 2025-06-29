@@ -1,0 +1,93 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="BlogsHeading">Blogs Site</h1>
+    <form class="blogsForm" action="/blogs" method="POST">
+        Title: <input class="title" name="title" placeholder="enter title" type="text"><br>
+        Actor: <input class="actor" name="actor" placeholder="enter Actor" type="text"><br>
+        Description: <textarea class="description" name="description" rows="10" cols="50" placeholder="enter description" type="text"></textarea>
+
+
+        <button type="submit">Add Blog</button>
+    </form>
+
+    
+    <ul class="blogsList">
+        {{#each blogs as |blogs|}}
+        <li class="blogItem">Title: {{this.title}},Actor:{{blog.actor}}, Description: {{this.description}}</li>
+        {{/each}}
+    </ul>
+</body>
+</html> --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    {{> navbar}}
+    <div class="header">
+        <h1 class="heading">Blog Site</h1>
+
+        <form class="blogForm" action="/blogs" method="POST">
+            <div class="titleBox">
+                <span class="titleText">Title: </span>
+                <input class="title" type="text" name="title" placeholder="Enter title"> 
+            </div>
+            <div class="actorBox">
+                <span class="actorText">Actor: </span>
+                 {{!-- <input class="actor" type="text" name="actor" placeholder="Enter actor">  --}}
+                 <select name="actor">
+                    <option value="">Daniel</option>
+                 </select>
+            </div>
+            <div class="descriptionBox">
+                <span class="descriptionText">Description: </span>
+                <textarea class="description" type="text" name="description" rows="5" placeholder="Enter description"></textarea> 
+            </div>
+            
+            <button class="submitBtn" type="submit">Add Blog</button>
+        </form>
+    </div>
+
+    <ul class="blog-list">
+        {{#each blogs as |blog|}}
+            <li class="blogItem">
+                <div class="blogTitle">
+                    <span class="blogTitleHeading">Title: </span>
+                    <span class="blogTitleText">{{blog.title}}</span>
+                </div>
+                <div class="blogActor">
+                    <span class="blogActorHeading">Actor: </span>
+                    <span class="blogActorText">{{blog.actor}}</span>
+                </div>
+                <div class="blogDescription">
+                    <span class="blogDescriptionHeading">Description: </span>
+                    <span class="blogDescriptionText">{{blog.description}}</span>
+                </div>
+
+                <button class="dlt-btn">
+                    <a href="/delete?id={{blog._id}}">Delete</a>
+                </button>
+
+                <button class="update-btn">
+                    <a href="/update?id={{blog._id}}">Update</a>
+                </button>
+
+                <button class="details-btn">
+                    <a href="/details?id={{blog._id}}">Details</a>
+                </button>
+            </li>
+        {{/each}}
+    </ul>
+</body>
+</html>

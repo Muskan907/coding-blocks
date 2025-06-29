@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Money Heist",
+        "actor": "Álvaro Morte",
+        "description": "A mastermind gathers eight criminals to carry out an ambitious heist on the Royal Mint of Spain."
+    },
+    {
+        "title": "The Boys",
+        "actor": "Karl Urban",
+        "description": "In a world where superheroes abuse their powers, a group of vigilantes take them down by any means necessary."
+    },
+    {
+        "title": "Ozark",
+        "actor": "Jason Bateman",
+        "description": "A financial planner drags his family into the dark world of money laundering for a drug cartel."
+    },
+    {
+        "title": "Loki",
+        "actor": "Tom Hiddleston",
+        "description": "After stealing the Tesseract, Loki lands in trouble with the Time Variance Authority and explores multiverse chaos."
+    },
+    {
+        "title": "Chernobyl",
+        "actor": "Jared Harris",
+        "description": "A gripping retelling of the 1986 Chernobyl nuclear disaster and the brave people who tried to contain it."
+    },
+    {
+        "title": "Better Call Saul",
+        "actor": "Bob Odenkirk",
+        "description": "A small-time lawyer slowly transforms into the morally questionable Saul Goodman from Breaking Bad."
+    },
+    {
+        "title": "The Crown",
+        "actor": "Olivia Colman",
+        "description": "A historical drama chronicling the reign of Queen Elizabeth II and the events that shaped the 20th century."
+    },
+    {
+        "title": "Narcos",
+        "actor": "Wagner Moura",
+        "description": "The rise and fall of drug kingpin Pablo Escobar and the Medellín Cartel."
+    }
+]
